@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM manipulation</title>
+  <link rel="shortcut icon" href="../assets/es-ecmascript-logo.png">
+</head>
+
+<body>
+  <h1>Tasks</h1>
+
+  <p>
+    This example shows usage of modern DOM manipulation in simple HTML5 application.
+    Trivial event handlers in multipage application are well suited for content rich documents i.e. calogs or e-shops.
+    The simple handler multipage application style may have static site generators (JAM stack - JavaScript, APIs and Markup).
+  </p>
+
+  <ol id="task-list">
+    <template>
+      <li>
+        <details>
+          <summary>task name</summary>
+          <p>task description</p>
+        </details>
+        <button>remove</button>
+        <hr />
+      </li>
+    </template>
+  </ol>
+
+  <fieldset id="new-task-form">
+    <legend>New task</legend>
+    <input id="task-name" type="text" placeholder="name" />
+    <br />
+    <textarea id="task-description" placeholder="description"></textarea>
+    <hr />
+    <button id="add-task">Add new task</button>  
+  </fieldset>
+
+  <dialog id="confirmation-dialog">
+    <p>Do you want to do add task <em>UNKNOWN</em>?</p>
+
+    <form method="dialog">
+      <button value="yes" autofocus>Yes</button>
+      <button value="no">No</button>
+    </form>
+  </dialog>
+
+  <footer><a href="../">Back to Topics</a></footer>
+
+  <script type="module">
+    import { startApp } from './app.js'
+    startApp()
+  </script>
+</body>
+
+</html>

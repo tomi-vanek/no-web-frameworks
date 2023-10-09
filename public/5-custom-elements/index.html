@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Elements</title>
+  <link rel="shortcut icon" href="../assets/es-ecmascript-logo.png">
+
+  <!-- <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"></script> -->
+  <script defer type="module" src="./timer-app.js"></script>
+  <script defer type="module" src="./timer-clock.js"></script>
+
+  <style>
+    h2 {
+      color: green
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Timer</h1>
+
+    <h2>Title in HTML</h2>
+
+    <timer-app>
+      <timer-clock active></timer-clock>
+
+      <p>The <strong>Timer</strong> web application is built from html custom elements.
+        Elements communicate by html custom events: they publish information about state change and subscribe handlers to events.
+        This publish-subscribe construction keeps the components unaware of the context in which they collaborate to fulfil the application logic.
+      </p>
+    </timer-app>
+  </main>
+
+  <p>Current time is <strong id="currnet-time">???</strong> UTC.</p>
+
+  <footer><a href="../">Back to Topics</a></footer>
+
+  <script type="module">
+    const timeElem = document.getElementById('currnet-time')
+    const [eventSource] = document.getElementsByTagName('timer-app')
+
+    eventSource.addEventListener(
+      'clock-tick',
+      event => () => {
+        timeElem.innerText = event.detail
+      }
+    )
+  </script>
+</body>
+</html>

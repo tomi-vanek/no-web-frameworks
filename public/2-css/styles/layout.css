@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0 0 var(--s-2) 0;
+  padding: var(--s0);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+
+  margin: var(--s-2) var(--s-2) var(--s4) var(--s-2);
+}
+
+section {
+  flex: 1 1 calc(var(--s0) * 20);
+
+  margin: var(--s0);
+  padding: var(--s-2);
+}
+
+section p:not(:last-child) {
+  margin-bottom: var(--s-2);
+}

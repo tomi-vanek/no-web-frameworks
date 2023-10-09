@@ -1,0 +1,63 @@
+html, body {
+  background-image: url(../images/merlot.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 70%;
+  background-attachment: fixed;
+}
+
+header {
+  color: white;
+  background-color: navy;
+  animation: startAnimation 2s ease 0s 1 normal forwards;
+}
+
+footer {
+  background-color: gainsboro;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+section {
+  border: 1px solid gray;
+  box-shadow: var(--shallow-shadow);
+  border-radius: var(--s-4);
+  background-color: white;
+
+  opacity: 90%;
+}
+
+@media only screen and (max-width: 450px) {
+  html, body {
+    background-image: none;
+  }
+  
+  header {
+    color: navy;
+    background-color: white;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  main {
+    background-color: white;
+    animation: none;
+  }
+
+  section {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;  
+  }
+
+  footer {
+    position: static;
+    background-color: white;
+    border: none;
+    text-align: right;
+    padding: var(--s-1) var(--s1)
+  }
+}

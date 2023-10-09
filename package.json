@@ -1,0 +1,43 @@
+{
+  "name": "web-platform-examples",
+  "version": "0.0.2",
+  "description": "Web platform examples",
+  "type": "module",
+  "module": "server.js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch --watch-preserve-output --trace-warnings service.js",
+    "test": "standard && standard --plugin html '**/*.html'",
+    "fix": "standard --fix",
+    "postinstall": "npm run dependencies",
+    "dependencies": "node ./tools/bundleDependencies.js"
+  },
+  "author": "tomi.vanek",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.19.2",
+    "eslint-plugin-html": "^7.1.0",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "the-new-css-reset": "^1.9.0"
+  },
+  "standard": {
+    "ignore": [
+      "**/assets/**/*.*",
+      "/node_modules/**/*.*",
+      "/web_modules/**/*.*"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": [
+      "self",
+      "window",
+      "requestAnimationFrame",
+      "HTMLElement"
+    ]
+  }
+}

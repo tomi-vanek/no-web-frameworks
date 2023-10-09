@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcmaScript 6 Modules</title>
+  <link rel="shortcut icon" href="../assets/es-ecmascript-logo.png">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "moment": "../../web_modules/moment/index.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>... loading</h1>
+
+  <ul>
+    <li>External NPM dependencies</li>
+    <li>Application modules</li>
+  </ul>
+
+  <footer><a href="../">Back to Topics</a></footer>
+
+  <script type="module">
+    import { durationFromLoad } from './duration-from-load.js'
+    const [header] = document.getElementsByTagName('h1')
+    durationFromLoad(header)
+  </script>
+</body>
+</html>

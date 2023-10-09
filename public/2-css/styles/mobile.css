@@ -1,0 +1,38 @@
+@media only screen and (max-width: 450px) {
+  html, body {
+    background-image: none;
+  }
+  
+  header {
+    color: navy;
+    background-color: white;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  main {
+    background-color: white;
+    animation: none;
+  }
+
+  section {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;  
+  }
+
+  footer {
+    position: static;
+    background-color: white;
+    border: none;
+    text-align: right;
+    padding: var(--s-1) var(--s1)
+  }
+
+  time {
+    display: none;
+  }
+}

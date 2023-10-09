@@ -1,0 +1,22 @@
+h1 {
+  font-size: calc(var(--s6) + 0.5vw);
+  margin: var(--s-3)  var(--s-3)  var(--s-3);
+  text-align: center;
+}
+
+h2 {
+  font-size: calc(var(--s3) + 0.5vw);
+}
+
+h3 {
+  font-size: calc(var(--s2) + 0.5vw);
+  font-weight: bold;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}

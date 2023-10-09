@@ -6,7 +6,7 @@
   "module": "server.js",
   "main": "server.js",
   "scripts": {
-    "dev": "node --watch --watch-preserve-output --trace-warnings service.js",
+    "dev": "node --watch --watch-preserve-output --trace-warnings server.js",
     "test": "standard && standard --plugin html '**/*.html'",
     "fix": "standard --fix",
     "postinstall": "npm run dependencies",

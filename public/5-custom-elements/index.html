@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Elements</title>
-  <link rel="shortcut icon" href="../assets/es-ecmascript-logo.png">
+  <link rel="shortcut icon" href="../es-logo.png">
 
   <!-- <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"></script> -->
   <script defer type="module" src="./timer-app.js"></script>
@@ -38,13 +38,11 @@
 
   <script type="module">
     const timeElem = document.getElementById('currnet-time')
-    const [eventSource] = document.getElementsByTagName('timer-app')
+    const [elem] = document.getElementsByTagName('main')
 
-    eventSource.addEventListener(
+    elem.addEventListener(
       'clock-tick',
-      event => () => {
-        timeElem.innerText = event.detail
-      }
+      event => timeElem.innerText = event.detail
     )
   </script>
 </body>

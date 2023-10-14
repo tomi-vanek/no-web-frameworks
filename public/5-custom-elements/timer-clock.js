@@ -96,11 +96,14 @@ class TimerClock extends HTMLElement {
     if (this.active) {
       const currentTime = new Date().toISOString().split(/[TZ.]/g)[1]
 
-      const event = new CustomEvent('clock-tick', {
-        bubbles: true, // propagated in hierarchy
-        composed: true, // "penetrate" through shadow root up
-        detail: currentTime // event data
-      })
+      const event = new CustomEvent(
+        'clock-tick',
+        {
+          bubbles: true, // propagated in hierarchy
+          composed: true, // "penetrate" through shadow root up
+          detail: currentTime // event data
+        }
+      )
 
       this.dispatchEvent(event)
     }

@@ -1,13 +1,3 @@
-async function fetchJson (fileUrl) {
-  const response = await fetch(fileUrl)
-  if (!response.ok) {
-    throw new Error(`Error: ${response.status} - ${response.statusText}`)
-  }
-
-  const json = await response.json()
-  return json
-}
-
 export async function fetchData (fileAddresses) {
   try {
     const results = await Promise.allSettled(
@@ -21,4 +11,14 @@ export async function fetchData (fileAddresses) {
   } catch (error) {
     console.error('ERROR', error)
   }
+}
+
+async function fetchJson (fileUrl) {
+  const response = await fetch(fileUrl)
+  if (!response.ok) {
+    throw new Error(`Error: ${response.status} - ${response.statusText}`)
+  }
+
+  const json = await response.json()
+  return json
 }

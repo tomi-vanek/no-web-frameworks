@@ -21,8 +21,6 @@ class TimerApp extends HTMLElement {
     templateElem.innerHTML = this.html
     const htmlFragment = templateElem.content.cloneNode(true)
 
-    // Instantiate and attach the shadow root
-    // this.appendChild(htmlFragment)
     this.root = this.attachShadow({ mode: 'open' })
     this.root.appendChild(htmlFragment)
   }

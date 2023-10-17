@@ -58,8 +58,8 @@ class TimerClock extends HTMLElement {
   connectedCallback () {
     console.log(this.constructor.name, 'connected to DOM')
 
-    this.toggleElem = this.shadowRoot.querySelector('button[toggle]')
     this.clockElem = this.shadowRoot.querySelector('[clock]')
+    this.toggleElem = this.shadowRoot.querySelector('button[toggle]')
 
     this.toggleElem.addEventListener('click', this.toggleActive.bind(this))
     this.addEventListener('clock-tick', this.clockTickHandler)

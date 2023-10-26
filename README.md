@@ -3,7 +3,7 @@
 This set of examples show that in many cases you do not need to use any web frameworks, the standard HTML, CSS and JavaScript may provide you enough functionality to accomplish the task.
 
 Code was prepared as examples for talk [The Death of Web Frameworks](https://www.openslava.sk/2023/#/program/7ab4cf0f-48ea-445d-87c1-a55c9548130b)
-on OpenSlava 2023 conference.
+on _**OpenSlava 2023**_ conference - [talk video on YouTube](https://www.youtube.com/watch?v=lmf1I1W7kr8).
 
 ## Quick start
 
